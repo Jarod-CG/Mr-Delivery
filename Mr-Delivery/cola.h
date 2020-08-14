@@ -3,6 +3,7 @@
 
 #include <QMutex>
 #include "nodografo.h"
+#include "grafo.h"
 
 //es una cola de grafos
 class Cola
@@ -12,6 +13,12 @@ private:
     NodoGrafo * frente;
 public:
     Cola();
+    NodoGrafo * encolar (Grafo*);
+    NodoGrafo * desencolar (void);
+    NodoGrafo *verFrente (void);
+    bool vacia (void);
+    void imprimir();
+
     QMutex *getMutex() const;
     void setMutex(QMutex *value);
     NodoGrafo *getFrente() const;

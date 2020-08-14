@@ -18,7 +18,9 @@ private:
 public:
     Grafo();
     void imprimir();
-    void insertarVertice (QString nombre);
+    bool insertarVertice (QString nombre);
+    bool insertarArista (Arista * arista);
+
     //Svoid insertarArista (QString origen, QString arista,)
 };
 

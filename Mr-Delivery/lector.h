@@ -17,6 +17,8 @@ private:
     QString path;//es el path general
     Grafo * grafo;
     Cola * cola;
+    bool correcto;
+    QString jsonFile;
 public:
     Lector();
     void __init__(QString path, Cola * cola);//es para inicializar todos los atributos
@@ -26,9 +28,10 @@ public:
     void resume ();
     void procesar();
     QString cargar ();
-    void abrirJson(QString strJson);
-    void construirGrafo(QString vertices, QJsonArray aristas);
+    bool abrirJson(QString strJson);
+    bool construirGrafo(QStringList vertices, QJsonArray aristas);
     void mover();
+    Arista * crearArista (QJsonObject jsonArista);
 
 };
 

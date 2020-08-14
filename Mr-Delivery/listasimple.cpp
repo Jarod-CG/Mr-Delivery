@@ -21,8 +21,6 @@ void ListaSimple::imprimir(){
         tmp->imprimir();
         tmp = tmp->getSiguiente();
     }
-
-
 }
 
 Arista *ListaSimple::getPrimero() const
