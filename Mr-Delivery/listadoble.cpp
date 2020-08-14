@@ -23,7 +23,14 @@ void ListaDoble::imprimir(){
 }
 
 Vertice * ListaDoble::buscar(QString nombre){
-
+    Vertice * tmp = primer;
+    while (tmp!=nullptr){
+        if (tmp->getNombre()==nombre){
+            return tmp;
+        }
+        tmp = tmp->getSiguiente();
+    }
+    return nullptr;
 }
 
 Vertice *ListaDoble::getPrimer() const
